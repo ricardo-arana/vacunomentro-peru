@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
     "chart.js": "^3.5.0",
     "cheerio": "^1.0.0-rc.10",
     "next": "11.0.1",

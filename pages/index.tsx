@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { scrape } from '../helpers/reader';
-import styles from '../styles/Home.module.css'
 import Image from 'next/image';
 import React from 'react';
 import Summary from '../components/index/summary';
@@ -9,7 +8,6 @@ export default function Home({data}) {
   return (<>
     <Head>
     <title>Vacunometro Perú</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"></link>
     </Head>
     <header className="mb-4 mt-3">
       <div className="text-center fs-1"> <Image src="/images/flag-peru.png" alt="peru flag" width={35} height={35} />  Vacunometro Perú 💉</div>
