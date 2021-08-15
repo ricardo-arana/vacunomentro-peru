@@ -4,13 +4,15 @@ import Image from 'next/image';
 import React from 'react';
 import Summary from '../components/index/summary';
 import TotalPopulationChart from '../components/index/TotalPopulationChart';
+import ForkMeComponent from '../components/index/Forkme';
 export default function Home({data}) {
   return (<>
     <Head>
     <title>Vacunometro Perú</title>
     </Head>
+    <ForkMeComponent></ForkMeComponent>
     <header className="mb-4 mt-3">
-      <div className="text-center fs-1"> <Image src="/images/flag-peru.png" alt="peru flag" width={35} height={35} />  Vacunometro Perú 💉</div>
+      <div className="text-center fs-1 header"> <Image src="/images/flag-peru.png" alt="peru flag" width={35} height={35} />  Vacunometro Perú 💉</div>
     </header>
     <div className="container">
        <Summary data={data}></Summary>
