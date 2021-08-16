@@ -22,9 +22,17 @@ export default function Home({data}) {
   )
 }
 
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
+// export async function getStaticProps({ req, res }) {
+
+  
+// }
+
+export async function getServerSideProps({ req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+
   const data = await scrape('https://www.gob.pe/pongoelhombro');
   console.log(data);
 
