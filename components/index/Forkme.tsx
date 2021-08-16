@@ -5,7 +5,7 @@ import Style from '../../styles/ForkMe.module.css';
 export default function ForkMeComponent() {
     // TODO: Mejorar por medio de media query el tamaño de la imagen forkme
     return (
-        <div className={Style.ForkMe}>
+        <div className="ForkMe">
         <a href="https://github.com/ricardo-arana/vacunomentro-peru">
             <Image loading="lazy" width="100"
              height="100"
