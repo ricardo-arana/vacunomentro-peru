@@ -22,11 +22,6 @@ export default function Home({data}) {
   )
 }
 
-// export async function getStaticProps({ req, res }) {
-
-  
-// }
-
 export async function getServerSideProps({ req, res }) {
   res.setHeader(
     'Cache-Control',
@@ -36,8 +31,7 @@ export async function getServerSideProps({ req, res }) {
   const data = await scrape('https://www.gob.pe/pongoelhombro');
   console.log(data);
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+
   return {
     props: {
       data,
