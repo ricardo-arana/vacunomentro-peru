@@ -1,5 +1,5 @@
 import { Doughnut } from 'react-chartjs-2';
-import styles from '../../styles/TotalPopulationChart.module.css';
+import styles from '../../styles/TotalPopulationChart.module.scss';
 
 export default function TotalPopulationChart({ data }) {
   // TODO: verificar alguna fuente confiable para obtener la población peruana

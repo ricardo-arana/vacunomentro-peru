@@ -18,6 +18,7 @@
     "react-chartjs-2": "^3.0.4",
     "react-dom": "17.0.2",
     "react-number-format": "^4.7.3",
+    "sass": "^1.38.0",
     "tinyreq": "^3.4.2"
   },
   "devDependencies": {
@@ -26,5 +27,7 @@
     "eslint-config-next": "11.0.1",
     "typescript": "4.3.5"
   },
-  "cacheDirectories": [".next/cache"]
+  "cacheDirectories": [
+    ".next/cache"
+  ]
 }

@@ -29,8 +29,6 @@ export async function getServerSideProps({ req, res }) {
   )
 
   const data = await scrape('https://www.gob.pe/pongoelhombro');
-  console.log(data);
-
 
   return {
     props: {
