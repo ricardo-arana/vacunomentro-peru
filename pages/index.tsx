@@ -9,6 +9,10 @@ export default function Home({data}) {
   return (<>
     <Head>
     <title>Vacunometro Perú</title>
+    <meta
+      name="description"           
+      content="Aplicación web para poder revisar rápidamente los indicadores de vacunación del Perú.
+               Tambien podemos ver un gráfico de torta que nos pemite ver en el avance de las vacunas"></meta>
     </Head>
     <ForkMeComponent></ForkMeComponent>
     <header className="mb-4 mt-3">
