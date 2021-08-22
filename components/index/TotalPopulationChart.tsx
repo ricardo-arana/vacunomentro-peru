@@ -1,9 +1,8 @@
 import { Doughnut } from 'react-chartjs-2';
 import styles from '../../styles/TotalPopulationChart.module.scss';
 
-export default function TotalPopulationChart({ data }) {
-  // TODO: verificar alguna fuente confiable para obtener la población peruana
-  const totalPopulationPeru = 31488625;
+export default function TotalPopulationChart({ data, populationPeru }) {
+  const totalPopulationPeru = populationPeru;
 
   const dataChart = {
     labels: ['Inmunizados', 'No inmunizados'],
