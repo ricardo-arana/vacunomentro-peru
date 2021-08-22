@@ -7,7 +7,7 @@ export class PopulationProvider {
     const headers = {
       'Content-Type': 'application/json',
       'x-rapidapi-host': 'world-population.p.rapidapi.com',
-      'x-rapidapi-key': '63df2b4f3bmshb46c75622f6460bp1db009jsn2179a7aa6081',
+      'x-rapidapi-key': process.env.RAPIDAPI_KEY,
     };
 
     const req = await fetch(url + params, {
