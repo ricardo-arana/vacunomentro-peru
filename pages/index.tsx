@@ -5,7 +5,8 @@ import React from 'react';
 import Summary from '../components/index/summary';
 import TotalPopulationChart from '../components/index/TotalPopulationChart';
 import ForkMeComponent from '../components/index/Forkme';
-export default function Home({data}) {
+import { PopulationProvider } from '../providers/population';
+export default function Home({data, populationPeru}) {
   return (<>
     <Head>
     <title>Vacunometro Perú</title>
@@ -20,7 +21,7 @@ export default function Home({data}) {
     </header>
     <div className="container">
        <Summary data={data}></Summary>
-       <TotalPopulationChart data={data}></TotalPopulationChart>
+       <TotalPopulationChart data={data} populationPeru={populationPeru} ></TotalPopulationChart>
     </div>
     </>
   )
@@ -34,9 +35,13 @@ export async function getServerSideProps({ req, res }) {
 
   const data = await scrape('https://www.gob.pe/pongoelhombro');
 
+  const population = new PopulationProvider();
+  const populationPeru = (await population.getPopulationPeru()).population;
+
   return {
     props: {
       data,
+      populationPeru
     },
   }
 }
