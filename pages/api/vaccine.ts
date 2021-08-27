@@ -19,7 +19,7 @@ export default async function handler(
     let data = await scrape('https://www.gob.pe/pongoelhombro');
     const populationProvider = new PopulationProvider()
     const population = await populationProvider.getPopulationPeru();
-    data = {...data, totalNoBothDose: population.population - data.totalNoBothDose};
+    data = {...data, totalNoBothDose: population.population - data.totalBothDose};
     res.status(200).json(data);
   } else {
     res.status(401).json({ data: { error: 'authorization'}})
